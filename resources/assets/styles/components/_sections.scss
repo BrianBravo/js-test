@@ -1,0 +1,118 @@
+.section {
+  @apply py-6;
+
+  @screen md {
+    @apply py-8;
+  }
+
+  @screen lg {
+    @apply py-12;
+  }
+
+  .heading {
+    @apply
+      font-heading
+      font-semibold
+      text-lg
+      text-contained
+      text-center
+    ;
+
+    @screen md {
+      @apply text-xl;
+    }
+
+    @screen lg {
+      @apply text-3xl;
+    }
+  }
+
+  .intro {
+    @apply text-contained text-center;
+  }
+}
+
+.sectionDivider {
+  border: none;
+  height: 1px;
+
+  @apply bg-grey max-w-xl mx-auto;
+}
+
+.section--products {
+  .media {
+    @apply mt-12;
+  }
+}
+
+.section--hero {
+  @apply relative bg-charcoal text-white;
+
+  background-image: url(../images/img_boxes.png);
+
+  &::after {
+    @apply absolute h-full w-full bg-charcoal opacity-50;
+
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .container {
+    @apply relative z-10;
+  }
+
+  .heading {
+    @apply text-left text-3xl;
+
+    @screen lg {
+      @apply text-5xl;
+    }
+  }
+
+  .intro {
+    @apply text-left mt-4 max-w-sm ml-0;
+
+    @screen lg {
+      @apply text-xl;
+    }
+  }
+
+  .quote {
+    @apply mt-12 text-sm text-center;
+
+    @screen lg {
+      @apply text-left;
+    }
+  }
+
+  .media {
+    @apply mt-8 flex items-center;
+
+    figure {
+      @apply mx-auto;
+
+      height: 5rem;
+      width: 5rem;
+
+      @screen lg {
+        @apply ml-0 mr-0;
+      }
+    }
+
+    p {
+      @apply mb-0;
+    }
+
+    small {
+      @apply text-xs;
+    }
+  }
+
+  .media__text {
+    @screen lg {
+      @apply pl-2;
+    }
+  }
+}

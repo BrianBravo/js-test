@@ -1,0 +1,83 @@
+.pricing {
+  @apply my-12;
+
+  @screen md {
+    @apply flex justify-between;
+  }
+}
+
+.pricingItem {
+  @apply
+    border
+    border-grey
+    border-solid
+    border-t-8
+    mb-8
+    px-4
+    py-10
+    rounded-lg
+    text-center
+    text-grey-dark
+  ;
+
+  @screen lg {
+    @apply mb-0;
+
+    width: calc(33.333% - 0.5rem);
+  }
+
+  @screen xl {
+    width: calc(33.333% - 3rem);
+  }
+
+  p {
+    @apply mb-0;
+  }
+}
+
+.pricingItem__text {
+  @apply text-sm;
+}
+
+.pricingItem__price {
+  @apply text-4xl leading-none;
+
+  sup {
+    @apply text-lg font-bold relative;
+
+    bottom: 10px;
+    left: 8px;
+  }
+}
+
+.pricingItem__list {
+  @apply mt-4 text-left;
+
+  li {
+    @apply mt-2;
+  }
+}
+
+.pricingItem__button {
+  @apply mt-8;
+}
+
+.pricingItem--popular {
+  @apply border-green relative;
+
+  &::before {
+    @apply absolute;
+
+    background-image: url(../images/img_card-badge.png);
+    background-size: cover;
+    content: "";
+    height: 82px;
+    right: -1px;
+    top: -8px;
+    width: 82px;
+  }
+
+  .pricingItem__button {
+    @extend .btn--green;
+  }
+}

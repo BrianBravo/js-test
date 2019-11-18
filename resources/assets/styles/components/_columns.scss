@@ -1,0 +1,17 @@
+.columns {
+  @screen md {
+    @apply flex;
+  }
+}
+
+.column {
+  @screen md {
+    @apply w-1/2;
+  }
+}
+
+.column + .column {
+  @screen md {
+    @apply pl-8;
+  }
+}

@@ -1,0 +1,23 @@
+.featureList {
+  @apply
+    list-none
+    text-center
+    pl-0
+  ;
+
+  @screen md {
+    @apply flex justify-between;
+  }
+
+  p {
+    @apply text-sm;
+  }
+}
+
+.featureList__item {
+  @apply mb-8 max-w-xs mx-auto;
+
+  @screen md {
+    @apply px-6 mb-0;
+  }
+}

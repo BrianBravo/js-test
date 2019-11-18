@@ -1,0 +1,43 @@
+.media {
+  @screen md {
+    @apply flex;
+  }
+}
+
+.media__text {
+  h3 {
+    @apply font-normal leading-none text-sm;
+  }
+
+  @screen md {
+    @apply w-1/2 px-16;
+  }
+}
+
+.media__figure {
+  img {
+    @apply block w-full;
+  }
+
+  @screen md {
+    @apply w-1/2;
+  }
+}
+
+.media__text__heading {
+  @apply text-lg;
+}
+
+.media--rightSideMedia {
+  .media__figure {
+    @screen md {
+      order: 1;
+    }
+  }
+
+  .media__text {
+    @screen md {
+      order: 0;
+    }
+  }
+}
